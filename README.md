@@ -1,2 +1,5 @@
-# webcomponents-starter-kit
-Web components starter kit with webpack
+# Web Components Starter-kit.
+
+Very basic starter kit using Web Components packaged with Webpack
+
+ 
