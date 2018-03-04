@@ -1,20 +1,18 @@
 import { Component } from '../interfaces';
 import { CustomElement } from '../utils';
 
-const style = `
-	border-bottom: 1px red solid;
-	background-color: #c1c1c1;
-`;
-
 @CustomElement('main-root')
 export class App extends Component {
-	constructor() {
-		super();
-
-		this.build();
+	_connect() {
+		this.$world = this.querySelector('#world');
+		this.addEventListener('click', () => console.log(this.$world))
 	}
-	build() {
-		this.style = style;
-		this.innerText = 'Hello World!';
+	render() {
+		return(
+			`
+				Hello 
+				<span id="world">World!</span>	
+			`
+		);
 	}
 }
